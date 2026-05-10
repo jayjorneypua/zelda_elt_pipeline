@@ -1,0 +1,210 @@
+version: 2
+
+models:
+  - name: dim_staff
+    columns:
+      - name: staff_sk
+        data_tests: [not_null, unique]
+      - name: staff_id
+        data_tests: [not_null, unique]
+      - name: staff_name
+        data_tests: [not_null]
+
+  - name: dim_game
+    columns:
+      - name: game_sk
+        data_tests: [not_null, unique]
+      - name: game_id
+        data_tests: [not_null, unique]
+      - name: game_name
+        data_tests: [not_null]
+
+  - name: dim_character
+    columns:
+      - name: character_sk
+        data_tests: [not_null, unique]
+      - name: character_id
+        data_tests: [not_null, unique]
+      - name: character_name
+        data_tests: [not_null]
+    
+  - name: dim_monster
+    columns:
+      - name: monster_sk
+        data_tests: [not_null, unique]
+      - name: monster_id
+        data_tests: [not_null, unique]
+      - name: monster_name
+        data_tests: [not_null]
+
+  - name: dim_dungeon
+    columns:
+      - name: dungeon_sk
+        data_tests: [not_null, unique]
+      - name: dungeon_id
+        data_tests: [not_null, unique]
+      - name: dungeon_name
+        data_tests: [not_null]
+
+  - name: dim_boss
+    columns:
+      - name: boss_sk
+        data_tests: [not_null, unique]
+      - name: boss_id
+        data_tests: [not_null, unique]
+      - name: boss_name
+        data_tests: [not_null]
+
+  - name: dim_item
+    columns:
+      - name: item_sk
+        data_tests: [not_null, unique]
+      - name: item_id
+        data_tests: [not_null, unique]
+      - name: item_name
+        data_tests: [not_null]
+      
+  - name: dim_place
+    columns:
+      - name: place_sk
+        data_tests: [not_null, unique]
+      - name: place_id
+        data_tests: [not_null, unique]
+      - name: place_name
+        data_tests: [not_null]
+
+  - name: fct_staff_games
+    columns:
+      - name: staff_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_staff')
+                field: staff_id
+      - name: game_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_game')
+                field: game_id
+
+  - name: fct_character_appearances
+    columns:
+      - name: character_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_character')
+                field: character_id
+      - name: game_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_game')
+                field: game_id
+
+  - name: fct_monster_appearances
+    columns:
+      - name: monster_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_monster')
+                field: monster_id
+      - name: game_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_game')
+                field: game_id
+
+  - name: fct_boss_appearances
+    columns:
+      - name: boss_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_boss')
+                field: boss_id
+      - name: game_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_game')
+                field: game_id
+
+  - name: fct_boss_dungeons
+    columns:
+      - name: boss_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_boss')
+                field: boss_id
+      - name: dungeon_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_dungeon')
+                field: dungeon_id
+
+  - name: fct_item_appearances
+    columns:
+      - name: item_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_item')
+                field: item_id
+      - name: game_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_game')
+                field: game_id
+
+  - name: fct_place_appearances
+    columns:
+      - name: place_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_place')
+                field: place_id
+      - name: game_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_game')
+                field: game_id
+              
+  - name: fct_place_inhabitants
+    columns:
+      - name: place_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_place')
+                field: place_id
+      - name: inhabitant_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_character')
+                field: character_id

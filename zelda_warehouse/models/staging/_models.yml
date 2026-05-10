@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: stg_zelda__staff
+    columns:
+      - name: staff_id
+        data_tests: [not_null, unique]
+      - name: staff_name
+        data_tests: [not_null]
+
+  - name: stg_zelda__games
+    columns:
+      - name: game_id
+        data_tests: [not_null, unique]
+      - name: game_name
+        data_tests: [not_null]
+
+  - name: stg_zelda__characters
+    columns:
+      - name: character_id
+        data_tests: [not_null, unique]
+      - name: character_name
+        data_tests: [not_null]
+
+  - name: stg_zelda__monsters
+    columns:
+      - name: monster_id
+        data_tests: [not_null, unique]
+      - name: monster_name
+        data_tests: [not_null]
+
+  - name: stg_zelda__dungeons
+    columns:
+      - name: dungeon_id
+        data_tests: [not_null, unique]
+      - name: dungeon_name
+        data_tests: [not_null]
+
+  - name: stg_zelda__bosses
+    columns:
+      - name: boss_id
+        data_tests: [not_null, unique]
+      - name: boss_name
+        data_tests: [not_null]
+
+  - name: stg_zelda__items
+    columns:
+      - name: item_id
+        data_tests: [not_null, unique]
+      - name: item_name
+        data_tests: [not_null]
+
+  - name: stg_zelda__places
+    columns:
+      - name: place_id
+        data_tests: [not_null, unique]
+      - name: place_name
+        data_tests: [not_null]

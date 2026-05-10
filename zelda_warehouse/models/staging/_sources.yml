@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: zelda_raw # dbt label just a tag for dbt's bookkeeping
+    schema: raw
+    tables: 
+      - name: zelda_staff
+      - name: zelda_games
+      - name: zelda_characters
+      - name: zelda_monsters
+      - name: zelda_dungeons
+      - name: zelda_bosses
+      - name: zelda_items
+      - name: zelda_places
