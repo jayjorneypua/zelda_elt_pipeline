@@ -1,5 +1,5 @@
 """Run every extractor in sequence."""
-from common import run
+from common import run_pipeline
 
 EXTRACTORS = [
     ("games", "https://zelda.fanapis.com/api/games"),
@@ -14,4 +14,4 @@ EXTRACTORS = [
 
 if __name__ == "__main__":
     for name, url in EXTRACTORS:
-        run(name, url)
+        run_pipeline(name, url)
