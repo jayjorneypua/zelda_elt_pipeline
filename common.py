@@ -73,7 +73,7 @@ logger = logging.getLogger(__name__)
 # ──────────────────────────────────────────────────────────────────────────────
 load_dotenv()
 DSN = os.environ["POSTGRES_DSN"]
-PAGE_SIZE = 25
+PAGE_SIZE = 50
 SLEEP = 0.2
 
 DDL = """
@@ -98,6 +98,23 @@ UPSERT = """
     WHERE raw.zelda_{name}.payload IS DISTINCT FROM EXCLUDED.payload;
 
 """
+
+UNIDENTIFIED_DDL = """
+    CREATE SCHEMA IF NOT EXISTS raw;
+    CREATE TABLE IF NOT EXISTS raw.unidentified (
+        raw_id BIGSERIAL PRIMARY KEY,
+        source_name TEXT NOT NULL,
+        raw_payload JSONB NOT NULL,
+        reason TEXT,
+        extracted_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    );
+"""
+
+UNIDENTIFIED_INSERT = """
+    INSERT INTO raw.unidentified (source_name, raw_payload, reason)
+    VALUES %s;
+"""
+
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Fetch (with retries)
@@ -166,16 +183,32 @@ def fetch_all(url):
 def load_to_raw(name, records):
     """Upsert records into raw.zelda_<name>."""
 
-    rows = [(record["id"], json.dumps(record)) for record in records]
+    good_records = []
+    unidentified = []
 
-    logger.info("Loading %d rows into raw.zelda_%s", len(rows), name)
+    for record in records:
+        if isinstance(record, dict) and record.get("id"):
+            good_records.append(record)
+        else:
+            reason = "not_a_dict" if not isinstance(record, dict) else "missing_id"
+            unidentified.append((name, json.dumps(record), reason))
 
     with psycopg2.connect(DSN) as connection, connection.cursor() as cursor:
         cursor.execute(DDL.format(name=name))
-        execute_values(cursor, UPSERT.format(name=name), rows)
+        cursor.execute(UNIDENTIFIED_DDL)
 
-    logger.info("Loaded %d rows into raw.zelda_%s", len(rows), name)
-    return len(rows)
+        if good_records:
+            rows = [(record["id"], json.dumps(record)) for record in good_records]
+            execute_values(cursor, UPSERT.format(name=name), rows)
+
+        if unidentified:
+            execute_values(cursor, UNIDENTIFIED_INSERT, unidentified)
+
+    logger.info(
+        "[%s] loaded %d rows, quarantined %d unidentified rows",
+        name, len(good_records), len(unidentified),
+    )
+    return len(good_records), len(unidentified)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -188,9 +221,12 @@ def run_pipeline(name, url):
 
     try:
         records = fetch_all(url)
-        row_count = load_to_raw(name, records)
-        logger.info("[%s] pulled %d, upserted into raw.zelda_%s", name, len(records), name)
-        return row_count
+        loaded, unidentified = load_to_raw(name, records)
+        logger.info(
+            "[%s] sumary: fetched=%d, loaded=%d, unidentified=%d",
+            name, len(records), loaded, unidentified
+        )
+        return loaded, unidentified
         
     except Exception:
         logger.exception("[%s] extractor failed", name)
