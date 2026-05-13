@@ -430,3 +430,650 @@
 2026-05-11 14:43:03,567 - common - INFO - Loading 1869 rows into raw.zelda_items
 2026-05-11 14:43:03,713 - common - INFO - Loaded 1869 rows into raw.zelda_items
 2026-05-11 14:43:03,713 - common - INFO - [items] pulled 1869, upserted into raw.zelda_items
+2026-05-12 09:00:03,539 - common - INFO - === Running extractor for 'games' ===
+2026-05-12 09:00:03,539 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/games
+2026-05-12 09:00:05,944 - common - INFO - page 0: fetched 32 records (running total: 32)
+2026-05-12 09:00:05,944 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/games — 32 records total
+2026-05-12 09:00:05,944 - common - INFO - Loading 32 rows into raw.zelda_games
+2026-05-12 09:00:06,091 - common - INFO - Loaded 32 rows into raw.zelda_games
+2026-05-12 09:00:06,091 - common - INFO - [games] pulled 32, upserted into raw.zelda_games
+2026-05-12 09:00:06,091 - common - INFO - === Running extractor for 'staff' ===
+2026-05-12 09:00:06,091 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/staff
+2026-05-12 09:00:06,776 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 09:00:07,696 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 09:00:08,777 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 09:00:09,625 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 09:00:10,470 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 09:00:11,332 - common - INFO - page 5: fetched 4 records (running total: 254)
+2026-05-12 09:00:11,332 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/staff — 254 records total
+2026-05-12 09:00:11,334 - common - INFO - Loading 254 rows into raw.zelda_staff
+2026-05-12 09:00:11,369 - common - INFO - Loaded 254 rows into raw.zelda_staff
+2026-05-12 09:00:11,369 - common - INFO - [staff] pulled 254, upserted into raw.zelda_staff
+2026-05-12 09:00:11,369 - common - INFO - === Running extractor for 'characters' ===
+2026-05-12 09:00:11,369 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/characters
+2026-05-12 09:00:12,311 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 09:00:13,563 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 09:00:14,425 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 09:00:15,273 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 09:00:16,125 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 09:00:16,972 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-12 09:00:17,820 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-12 09:00:19,173 - common - INFO - page 7: fetched 50 records (running total: 400)
+2026-05-12 09:00:20,151 - common - INFO - page 8: fetched 50 records (running total: 450)
+2026-05-12 09:00:21,008 - common - INFO - page 9: fetched 50 records (running total: 500)
+2026-05-12 09:00:21,871 - common - INFO - page 10: fetched 50 records (running total: 550)
+2026-05-12 09:00:23,078 - common - INFO - page 11: fetched 50 records (running total: 600)
+2026-05-12 09:00:24,391 - common - INFO - page 12: fetched 50 records (running total: 650)
+2026-05-12 09:00:25,723 - common - INFO - page 13: fetched 50 records (running total: 700)
+2026-05-12 09:00:27,054 - common - INFO - page 14: fetched 50 records (running total: 750)
+2026-05-12 09:00:28,143 - common - INFO - page 15: fetched 50 records (running total: 800)
+2026-05-12 09:00:28,957 - common - INFO - page 16: fetched 50 records (running total: 850)
+2026-05-12 09:00:29,819 - common - INFO - page 17: fetched 50 records (running total: 900)
+2026-05-12 09:00:31,046 - common - INFO - page 18: fetched 50 records (running total: 950)
+2026-05-12 09:00:32,275 - common - INFO - page 19: fetched 50 records (running total: 1000)
+2026-05-12 09:00:33,604 - common - INFO - page 20: fetched 50 records (running total: 1050)
+2026-05-12 09:00:34,487 - common - INFO - page 21: fetched 50 records (running total: 1100)
+2026-05-12 09:00:35,349 - common - INFO - page 22: fetched 50 records (running total: 1150)
+2026-05-12 09:00:36,213 - common - INFO - page 23: fetched 50 records (running total: 1200)
+2026-05-12 09:00:37,130 - common - INFO - page 24: fetched 50 records (running total: 1250)
+2026-05-12 09:00:38,262 - common - INFO - page 25: fetched 50 records (running total: 1300)
+2026-05-12 09:00:39,113 - common - INFO - page 26: fetched 50 records (running total: 1350)
+2026-05-12 09:00:39,957 - common - INFO - page 27: fetched 50 records (running total: 1400)
+2026-05-12 09:00:40,967 - common - INFO - page 28: fetched 50 records (running total: 1450)
+2026-05-12 09:00:42,301 - common - INFO - page 29: fetched 50 records (running total: 1500)
+2026-05-12 09:00:43,633 - common - INFO - page 30: fetched 50 records (running total: 1550)
+2026-05-12 09:00:44,522 - common - INFO - page 31: fetched 50 records (running total: 1600)
+2026-05-12 09:00:45,330 - common - INFO - page 32: fetched 50 records (running total: 1650)
+2026-05-12 09:00:46,157 - common - INFO - page 33: fetched 27 records (running total: 1677)
+2026-05-12 09:00:46,157 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/characters — 1677 records total
+2026-05-12 09:00:46,163 - common - INFO - Loading 1677 rows into raw.zelda_characters
+2026-05-12 09:00:46,233 - common - INFO - Loaded 1677 rows into raw.zelda_characters
+2026-05-12 09:00:46,234 - common - INFO - [characters] pulled 1677, upserted into raw.zelda_characters
+2026-05-12 09:00:46,234 - common - INFO - === Running extractor for 'monsters' ===
+2026-05-12 09:00:46,234 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/monsters
+2026-05-12 09:00:47,324 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 09:00:48,953 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 09:00:50,281 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 09:00:51,527 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 09:00:52,540 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 09:00:53,376 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-12 09:00:54,197 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-12 09:00:55,811 - common - INFO - page 7: fetched 50 records (running total: 400)
+2026-05-12 09:00:56,823 - common - INFO - page 8: fetched 50 records (running total: 450)
+2026-05-12 09:00:57,671 - common - INFO - page 9: fetched 50 records (running total: 500)
+2026-05-12 09:00:58,564 - common - INFO - page 10: fetched 50 records (running total: 550)
+2026-05-12 09:00:59,801 - common - INFO - page 11: fetched 50 records (running total: 600)
+2026-05-12 09:01:01,031 - common - INFO - page 12: fetched 50 records (running total: 650)
+2026-05-12 09:01:02,361 - common - INFO - page 13: fetched 50 records (running total: 700)
+2026-05-12 09:01:03,589 - common - INFO - page 14: fetched 50 records (running total: 750)
+2026-05-12 09:01:04,833 - common - INFO - page 15: fetched 50 records (running total: 800)
+2026-05-12 09:01:06,033 - common - INFO - page 16: fetched 35 records (running total: 835)
+2026-05-12 09:01:06,033 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/monsters — 835 records total
+2026-05-12 09:01:06,033 - common - INFO - Loading 835 rows into raw.zelda_monsters
+2026-05-12 09:01:06,081 - common - INFO - Loaded 835 rows into raw.zelda_monsters
+2026-05-12 09:01:06,097 - common - INFO - [monsters] pulled 835, upserted into raw.zelda_monsters
+2026-05-12 09:01:06,097 - common - INFO - === Running extractor for 'bosses' ===
+2026-05-12 09:01:06,097 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/bosses
+2026-05-12 09:01:07,366 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 09:01:08,695 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 09:01:10,998 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 09:01:11,877 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 09:01:12,712 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 09:01:13,539 - common - INFO - page 5: fetched 25 records (running total: 275)
+2026-05-12 09:01:13,539 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/bosses — 275 records total
+2026-05-12 09:01:13,539 - common - INFO - Loading 275 rows into raw.zelda_bosses
+2026-05-12 09:01:13,586 - common - INFO - Loaded 275 rows into raw.zelda_bosses
+2026-05-12 09:01:13,586 - common - INFO - [bosses] pulled 275, upserted into raw.zelda_bosses
+2026-05-12 09:01:13,586 - common - INFO - === Running extractor for 'dungeons' ===
+2026-05-12 09:01:13,586 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/dungeons
+2026-05-12 09:01:14,252 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 09:01:15,081 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 09:01:15,938 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 09:01:17,091 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 09:01:18,423 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 09:01:19,756 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-12 09:01:21,087 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-12 09:01:22,319 - common - INFO - page 7: fetched 5 records (running total: 355)
+2026-05-12 09:01:22,319 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/dungeons — 355 records total
+2026-05-12 09:01:22,321 - common - INFO - Loading 355 rows into raw.zelda_dungeons
+2026-05-12 09:01:22,360 - common - INFO - Loaded 355 rows into raw.zelda_dungeons
+2026-05-12 09:01:22,360 - common - INFO - [dungeons] pulled 355, upserted into raw.zelda_dungeons
+2026-05-12 09:01:22,360 - common - INFO - === Running extractor for 'places' ===
+2026-05-12 09:01:22,360 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/places
+2026-05-12 09:01:23,343 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 09:01:24,661 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 09:01:26,000 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 09:01:27,324 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 09:01:28,962 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 09:01:30,302 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-12 09:01:31,631 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-12 09:01:32,638 - common - INFO - page 7: fetched 50 records (running total: 400)
+2026-05-12 09:01:33,459 - common - INFO - page 8: fetched 50 records (running total: 450)
+2026-05-12 09:01:34,332 - common - INFO - page 9: fetched 50 records (running total: 500)
+2026-05-12 09:01:35,527 - common - INFO - page 10: fetched 50 records (running total: 550)
+2026-05-12 09:01:36,762 - common - INFO - page 11: fetched 50 records (running total: 600)
+2026-05-12 09:01:38,077 - common - INFO - page 12: fetched 50 records (running total: 650)
+2026-05-12 09:01:39,406 - common - INFO - page 13: fetched 50 records (running total: 700)
+2026-05-12 09:01:40,736 - common - INFO - page 14: fetched 50 records (running total: 750)
+2026-05-12 09:01:42,068 - common - INFO - page 15: fetched 50 records (running total: 800)
+2026-05-12 09:01:42,977 - common - INFO - page 16: fetched 50 records (running total: 850)
+2026-05-12 09:01:43,816 - common - INFO - page 17: fetched 50 records (running total: 900)
+2026-05-12 09:01:44,683 - common - INFO - page 18: fetched 50 records (running total: 950)
+2026-05-12 09:01:46,057 - common - INFO - page 19: fetched 50 records (running total: 1000)
+2026-05-12 09:01:47,032 - common - INFO - page 20: fetched 50 records (running total: 1050)
+2026-05-12 09:01:47,845 - common - INFO - page 21: fetched 50 records (running total: 1100)
+2026-05-12 09:01:48,695 - common - INFO - page 22: fetched 50 records (running total: 1150)
+2026-05-12 09:01:50,051 - common - INFO - page 23: fetched 50 records (running total: 1200)
+2026-05-12 09:01:51,014 - common - INFO - page 24: fetched 50 records (running total: 1250)
+2026-05-12 09:01:51,862 - common - INFO - page 25: fetched 50 records (running total: 1300)
+2026-05-12 09:01:52,713 - common - INFO - page 26: fetched 50 records (running total: 1350)
+2026-05-12 09:01:53,827 - common - INFO - page 27: fetched 50 records (running total: 1400)
+2026-05-12 09:01:55,165 - common - INFO - page 28: fetched 50 records (running total: 1450)
+2026-05-12 09:01:56,374 - common - INFO - page 29: fetched 40 records (running total: 1490)
+2026-05-12 09:01:56,374 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/places — 1490 records total
+2026-05-12 09:01:56,383 - common - INFO - Loading 1490 rows into raw.zelda_places
+2026-05-12 09:01:56,435 - common - INFO - Loaded 1490 rows into raw.zelda_places
+2026-05-12 09:01:56,435 - common - INFO - [places] pulled 1490, upserted into raw.zelda_places
+2026-05-12 09:01:56,445 - common - INFO - === Running extractor for 'items' ===
+2026-05-12 09:01:56,445 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/items
+2026-05-12 09:01:57,523 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 09:01:58,741 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 09:01:59,991 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 09:02:01,207 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 09:02:02,438 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 09:02:03,660 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-12 09:02:04,889 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-12 09:02:06,118 - common - INFO - page 7: fetched 50 records (running total: 400)
+2026-05-12 09:02:07,338 - common - INFO - page 8: fetched 50 records (running total: 450)
+2026-05-12 09:02:08,309 - common - INFO - page 9: fetched 50 records (running total: 500)
+2026-05-12 09:02:09,596 - common - INFO - page 10: fetched 50 records (running total: 550)
+2026-05-12 09:02:11,234 - common - INFO - page 11: fetched 50 records (running total: 600)
+2026-05-12 09:02:12,461 - common - INFO - page 12: fetched 50 records (running total: 650)
+2026-05-12 09:02:13,689 - common - INFO - page 13: fetched 50 records (running total: 700)
+2026-05-12 09:02:14,915 - common - INFO - page 14: fetched 50 records (running total: 750)
+2026-05-12 09:02:16,151 - common - INFO - page 15: fetched 50 records (running total: 800)
+2026-05-12 09:02:17,270 - common - INFO - page 16: fetched 50 records (running total: 850)
+2026-05-12 09:02:18,506 - common - INFO - page 17: fetched 50 records (running total: 900)
+2026-05-12 09:02:19,729 - common - INFO - page 18: fetched 50 records (running total: 950)
+2026-05-12 09:02:20,961 - common - INFO - page 19: fetched 50 records (running total: 1000)
+2026-05-12 09:02:22,180 - common - INFO - page 20: fetched 50 records (running total: 1050)
+2026-05-12 09:02:23,163 - common - INFO - page 21: fetched 50 records (running total: 1100)
+2026-05-12 09:02:23,986 - common - INFO - page 22: fetched 50 records (running total: 1150)
+2026-05-12 09:02:24,820 - common - INFO - page 23: fetched 50 records (running total: 1200)
+2026-05-12 09:02:25,961 - common - INFO - page 24: fetched 50 records (running total: 1250)
+2026-05-12 09:02:27,196 - common - INFO - page 25: fetched 50 records (running total: 1300)
+2026-05-12 09:02:28,478 - common - INFO - page 26: fetched 50 records (running total: 1350)
+2026-05-12 09:02:29,752 - common - INFO - page 27: fetched 50 records (running total: 1400)
+2026-05-12 09:02:30,998 - common - INFO - page 28: fetched 50 records (running total: 1450)
+2026-05-12 09:02:32,201 - common - INFO - page 29: fetched 50 records (running total: 1500)
+2026-05-12 09:02:33,543 - common - INFO - page 30: fetched 50 records (running total: 1550)
+2026-05-12 09:02:34,770 - common - INFO - page 31: fetched 50 records (running total: 1600)
+2026-05-12 09:02:36,004 - common - INFO - page 32: fetched 50 records (running total: 1650)
+2026-05-12 09:02:37,222 - common - INFO - page 33: fetched 50 records (running total: 1700)
+2026-05-12 09:02:38,779 - common - INFO - page 34: fetched 50 records (running total: 1750)
+2026-05-12 09:02:40,189 - common - INFO - page 35: fetched 50 records (running total: 1800)
+2026-05-12 09:02:41,324 - common - INFO - page 36: fetched 50 records (running total: 1850)
+2026-05-12 09:02:42,543 - common - INFO - page 37: fetched 19 records (running total: 1869)
+2026-05-12 09:02:42,543 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/items — 1869 records total
+2026-05-12 09:02:42,554 - common - INFO - Loading 1869 rows into raw.zelda_items
+2026-05-12 09:02:42,619 - common - INFO - Loaded 1869 rows into raw.zelda_items
+2026-05-12 09:02:42,619 - common - INFO - [items] pulled 1869, upserted into raw.zelda_items
+2026-05-12 10:43:53,091 - common - INFO - === Running extractor for 'games' ===
+2026-05-12 10:43:53,091 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/games
+2026-05-12 10:43:53,683 - common - INFO - page 0: fetched 32 records (running total: 32)
+2026-05-12 10:43:53,683 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/games — 32 records total
+2026-05-12 10:43:53,683 - common - INFO - Loading 32 rows into raw.zelda_games
+2026-05-12 10:43:53,759 - common - INFO - Loaded 32 rows into raw.zelda_games
+2026-05-12 10:43:53,759 - common - INFO - [games] pulled 32, upserted into raw.zelda_games
+2026-05-12 10:43:53,759 - common - INFO - === Running extractor for 'staff' ===
+2026-05-12 10:43:53,759 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/staff
+2026-05-12 10:43:54,186 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 10:43:54,811 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 10:43:55,418 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 10:43:56,022 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 10:43:56,613 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 10:43:57,209 - common - INFO - page 5: fetched 4 records (running total: 254)
+2026-05-12 10:43:57,209 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/staff — 254 records total
+2026-05-12 10:43:57,209 - common - INFO - Loading 254 rows into raw.zelda_staff
+2026-05-12 10:43:57,253 - common - INFO - Loaded 254 rows into raw.zelda_staff
+2026-05-12 10:43:57,253 - common - INFO - [staff] pulled 254, upserted into raw.zelda_staff
+2026-05-12 10:43:57,253 - common - INFO - === Running extractor for 'characters' ===
+2026-05-12 10:43:57,253 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/characters
+2026-05-12 10:43:57,682 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 10:43:58,301 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 10:43:58,959 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 10:43:59,696 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 10:44:00,420 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 10:44:01,372 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-12 10:44:01,976 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-12 10:44:02,625 - common - INFO - page 7: fetched 50 records (running total: 400)
+2026-05-12 10:44:03,270 - common - INFO - page 8: fetched 50 records (running total: 450)
+2026-05-12 10:44:03,894 - common - INFO - page 9: fetched 50 records (running total: 500)
+2026-05-12 10:44:04,499 - common - INFO - page 10: fetched 50 records (running total: 550)
+2026-05-12 10:44:05,141 - common - INFO - page 11: fetched 50 records (running total: 600)
+2026-05-12 10:44:05,961 - common - INFO - page 12: fetched 50 records (running total: 650)
+2026-05-12 10:44:06,661 - common - INFO - page 13: fetched 50 records (running total: 700)
+2026-05-12 10:44:07,589 - common - INFO - page 14: fetched 50 records (running total: 750)
+2026-05-12 10:44:08,200 - common - INFO - page 15: fetched 50 records (running total: 800)
+2026-05-12 10:44:08,806 - common - INFO - page 16: fetched 50 records (running total: 850)
+2026-05-12 10:44:09,431 - common - INFO - page 17: fetched 50 records (running total: 900)
+2026-05-12 10:44:10,034 - common - INFO - page 18: fetched 50 records (running total: 950)
+2026-05-12 10:44:10,673 - common - INFO - page 19: fetched 50 records (running total: 1000)
+2026-05-12 10:44:11,321 - common - INFO - page 20: fetched 50 records (running total: 1050)
+2026-05-12 10:44:11,941 - common - INFO - page 21: fetched 50 records (running total: 1100)
+2026-05-12 10:44:12,573 - common - INFO - page 22: fetched 50 records (running total: 1150)
+2026-05-12 10:44:13,280 - common - INFO - page 23: fetched 50 records (running total: 1200)
+2026-05-12 10:44:14,521 - common - INFO - page 24: fetched 50 records (running total: 1250)
+2026-05-12 10:44:15,875 - common - INFO - page 25: fetched 50 records (running total: 1300)
+2026-05-12 10:44:16,504 - common - INFO - page 26: fetched 50 records (running total: 1350)
+2026-05-12 10:44:17,328 - common - INFO - page 27: fetched 50 records (running total: 1400)
+2026-05-12 10:44:17,955 - common - INFO - page 28: fetched 50 records (running total: 1450)
+2026-05-12 10:44:18,572 - common - INFO - page 29: fetched 50 records (running total: 1500)
+2026-05-12 10:44:19,225 - common - INFO - page 30: fetched 50 records (running total: 1550)
+2026-05-12 10:44:19,815 - common - INFO - page 31: fetched 50 records (running total: 1600)
+2026-05-12 10:44:20,446 - common - INFO - page 32: fetched 50 records (running total: 1650)
+2026-05-12 10:44:21,053 - common - INFO - page 33: fetched 27 records (running total: 1677)
+2026-05-12 10:44:21,053 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/characters — 1677 records total
+2026-05-12 10:44:21,056 - common - INFO - Loading 1677 rows into raw.zelda_characters
+2026-05-12 10:44:21,132 - common - INFO - Loaded 1677 rows into raw.zelda_characters
+2026-05-12 10:44:21,141 - common - INFO - [characters] pulled 1677, upserted into raw.zelda_characters
+2026-05-12 10:44:21,141 - common - INFO - === Running extractor for 'monsters' ===
+2026-05-12 10:44:21,141 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/monsters
+2026-05-12 10:44:21,585 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 10:44:22,276 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 10:44:22,913 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 10:44:23,541 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 10:44:24,365 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 10:44:25,081 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-12 10:44:25,762 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-12 10:44:26,367 - common - INFO - page 7: fetched 50 records (running total: 400)
+2026-05-12 10:44:27,115 - common - INFO - page 8: fetched 50 records (running total: 450)
+2026-05-12 10:44:27,842 - common - INFO - page 9: fetched 50 records (running total: 500)
+2026-05-12 10:44:28,664 - common - INFO - page 10: fetched 50 records (running total: 550)
+2026-05-12 10:44:29,379 - common - INFO - page 11: fetched 50 records (running total: 600)
+2026-05-12 10:44:30,047 - common - INFO - page 12: fetched 50 records (running total: 650)
+2026-05-12 10:44:30,681 - common - INFO - page 13: fetched 50 records (running total: 700)
+2026-05-12 10:44:31,296 - common - INFO - page 14: fetched 50 records (running total: 750)
+2026-05-12 10:44:31,882 - common - INFO - page 15: fetched 50 records (running total: 800)
+2026-05-12 10:44:32,536 - common - INFO - page 16: fetched 35 records (running total: 835)
+2026-05-12 10:44:32,536 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/monsters — 835 records total
+2026-05-12 10:44:32,545 - common - INFO - Loading 835 rows into raw.zelda_monsters
+2026-05-12 10:44:32,604 - common - INFO - Loaded 835 rows into raw.zelda_monsters
+2026-05-12 10:44:32,604 - common - INFO - [monsters] pulled 835, upserted into raw.zelda_monsters
+2026-05-12 10:44:32,605 - common - INFO - === Running extractor for 'bosses' ===
+2026-05-12 10:44:32,605 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/bosses
+2026-05-12 10:44:33,001 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 10:44:33,623 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 10:44:34,262 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 10:44:34,863 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 10:44:35,452 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 10:44:36,070 - common - INFO - page 5: fetched 25 records (running total: 275)
+2026-05-12 10:44:36,070 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/bosses — 275 records total
+2026-05-12 10:44:36,070 - common - INFO - Loading 275 rows into raw.zelda_bosses
+2026-05-12 10:44:36,247 - common - INFO - Loaded 275 rows into raw.zelda_bosses
+2026-05-12 10:44:36,248 - common - INFO - [bosses] pulled 275, upserted into raw.zelda_bosses
+2026-05-12 10:44:36,248 - common - INFO - === Running extractor for 'dungeons' ===
+2026-05-12 10:44:36,248 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/dungeons
+2026-05-12 10:44:36,674 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 10:44:37,340 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 10:44:37,973 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 10:44:38,620 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 10:44:39,242 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 10:44:39,844 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-12 10:44:40,513 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-12 10:44:41,153 - common - INFO - page 7: fetched 5 records (running total: 355)
+2026-05-12 10:44:41,153 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/dungeons — 355 records total
+2026-05-12 10:44:41,153 - common - INFO - Loading 355 rows into raw.zelda_dungeons
+2026-05-12 10:44:41,203 - common - INFO - Loaded 355 rows into raw.zelda_dungeons
+2026-05-12 10:44:41,203 - common - INFO - [dungeons] pulled 355, upserted into raw.zelda_dungeons
+2026-05-12 10:44:41,203 - common - INFO - === Running extractor for 'places' ===
+2026-05-12 10:44:41,203 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/places
+2026-05-12 10:44:41,655 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 10:44:42,303 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 10:44:42,911 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 10:44:43,533 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 10:44:44,163 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 10:44:44,802 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-12 10:44:45,422 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-12 10:44:46,028 - common - INFO - page 7: fetched 50 records (running total: 400)
+2026-05-12 10:44:46,654 - common - INFO - page 8: fetched 50 records (running total: 450)
+2026-05-12 10:44:47,267 - common - INFO - page 9: fetched 50 records (running total: 500)
+2026-05-12 10:44:47,874 - common - INFO - page 10: fetched 50 records (running total: 550)
+2026-05-12 10:44:48,495 - common - INFO - page 11: fetched 50 records (running total: 600)
+2026-05-12 10:44:49,115 - common - INFO - page 12: fetched 50 records (running total: 650)
+2026-05-12 10:44:49,726 - common - INFO - page 13: fetched 50 records (running total: 700)
+2026-05-12 10:44:50,562 - common - INFO - page 14: fetched 50 records (running total: 750)
+2026-05-12 10:44:51,540 - common - INFO - page 15: fetched 50 records (running total: 800)
+2026-05-12 10:44:52,198 - common - INFO - page 16: fetched 50 records (running total: 850)
+2026-05-12 10:44:53,034 - common - INFO - page 17: fetched 50 records (running total: 900)
+2026-05-12 10:44:53,735 - common - INFO - page 18: fetched 50 records (running total: 950)
+2026-05-12 10:44:54,348 - common - INFO - page 19: fetched 50 records (running total: 1000)
+2026-05-12 10:44:54,962 - common - INFO - page 20: fetched 50 records (running total: 1050)
+2026-05-12 10:44:55,595 - common - INFO - page 21: fetched 50 records (running total: 1100)
+2026-05-12 10:44:56,256 - common - INFO - page 22: fetched 50 records (running total: 1150)
+2026-05-12 10:44:56,897 - common - INFO - page 23: fetched 50 records (running total: 1200)
+2026-05-12 10:44:57,504 - common - INFO - page 24: fetched 50 records (running total: 1250)
+2026-05-12 10:44:58,092 - common - INFO - page 25: fetched 50 records (running total: 1300)
+2026-05-12 10:44:58,727 - common - INFO - page 26: fetched 50 records (running total: 1350)
+2026-05-12 10:44:59,353 - common - INFO - page 27: fetched 50 records (running total: 1400)
+2026-05-12 10:44:59,953 - common - INFO - page 28: fetched 50 records (running total: 1450)
+2026-05-12 10:45:00,613 - common - INFO - page 29: fetched 40 records (running total: 1490)
+2026-05-12 10:45:00,613 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/places — 1490 records total
+2026-05-12 10:45:00,619 - common - INFO - Loading 1490 rows into raw.zelda_places
+2026-05-12 10:45:00,686 - common - INFO - Loaded 1490 rows into raw.zelda_places
+2026-05-12 10:45:00,686 - common - INFO - [places] pulled 1490, upserted into raw.zelda_places
+2026-05-12 10:45:00,698 - common - INFO - === Running extractor for 'items' ===
+2026-05-12 10:45:00,699 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/items
+2026-05-12 10:45:01,114 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-12 10:45:01,733 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-12 10:45:02,354 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-12 10:45:02,974 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-12 10:45:03,612 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-12 10:45:04,394 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-12 10:45:05,211 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-12 10:45:06,045 - common - INFO - page 7: fetched 50 records (running total: 400)
+2026-05-12 10:45:06,663 - common - INFO - page 8: fetched 50 records (running total: 450)
+2026-05-12 10:45:07,275 - common - INFO - page 9: fetched 50 records (running total: 500)
+2026-05-12 10:45:07,853 - common - INFO - page 10: fetched 50 records (running total: 550)
+2026-05-12 10:45:08,486 - common - INFO - page 11: fetched 50 records (running total: 600)
+2026-05-12 10:45:09,115 - common - INFO - page 12: fetched 50 records (running total: 650)
+2026-05-12 10:45:09,716 - common - INFO - page 13: fetched 50 records (running total: 700)
+2026-05-12 10:45:10,451 - common - INFO - page 14: fetched 50 records (running total: 750)
+2026-05-12 10:45:11,286 - common - INFO - page 15: fetched 50 records (running total: 800)
+2026-05-12 10:45:12,261 - common - INFO - page 16: fetched 50 records (running total: 850)
+2026-05-12 10:45:13,095 - common - INFO - page 17: fetched 50 records (running total: 900)
+2026-05-12 10:45:13,986 - common - INFO - page 18: fetched 50 records (running total: 950)
+2026-05-12 10:45:14,826 - common - INFO - page 19: fetched 50 records (running total: 1000)
+2026-05-12 10:45:15,688 - common - INFO - page 20: fetched 50 records (running total: 1050)
+2026-05-12 10:45:16,333 - common - INFO - page 21: fetched 50 records (running total: 1100)
+2026-05-12 10:45:16,954 - common - INFO - page 22: fetched 50 records (running total: 1150)
+2026-05-12 10:45:17,584 - common - INFO - page 23: fetched 50 records (running total: 1200)
+2026-05-12 10:45:18,177 - common - INFO - page 24: fetched 50 records (running total: 1250)
+2026-05-12 10:45:18,811 - common - INFO - page 25: fetched 50 records (running total: 1300)
+2026-05-12 10:45:19,438 - common - INFO - page 26: fetched 50 records (running total: 1350)
+2026-05-12 10:45:20,043 - common - INFO - page 27: fetched 50 records (running total: 1400)
+2026-05-12 10:45:20,673 - common - INFO - page 28: fetched 50 records (running total: 1450)
+2026-05-12 10:45:21,310 - common - INFO - page 29: fetched 50 records (running total: 1500)
+2026-05-12 10:45:21,933 - common - INFO - page 30: fetched 50 records (running total: 1550)
+2026-05-12 10:45:22,713 - common - INFO - page 31: fetched 50 records (running total: 1600)
+2026-05-12 10:45:23,544 - common - INFO - page 32: fetched 50 records (running total: 1650)
+2026-05-12 10:45:24,234 - common - INFO - page 33: fetched 50 records (running total: 1700)
+2026-05-12 10:45:25,071 - common - INFO - page 34: fetched 50 records (running total: 1750)
+2026-05-12 10:45:25,898 - common - INFO - page 35: fetched 50 records (running total: 1800)
+2026-05-12 10:45:26,556 - common - INFO - page 36: fetched 50 records (running total: 1850)
+2026-05-12 10:45:27,162 - common - INFO - page 37: fetched 19 records (running total: 1869)
+2026-05-12 10:45:27,162 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/items — 1869 records total
+2026-05-12 10:45:27,178 - common - INFO - Loading 1869 rows into raw.zelda_items
+2026-05-12 10:45:27,356 - common - INFO - Loaded 1869 rows into raw.zelda_items
+2026-05-12 10:45:27,356 - common - INFO - [items] pulled 1869, upserted into raw.zelda_items
+2026-05-13 09:00:04,341 - common - INFO - === Running extractor for 'games' ===
+2026-05-13 09:00:04,342 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/games
+2026-05-13 09:00:06,736 - common - INFO - page 0: fetched 32 records (running total: 32)
+2026-05-13 09:00:06,737 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/games — 32 records total
+2026-05-13 09:00:06,738 - common - INFO - Loading 32 rows into raw.zelda_games
+2026-05-13 09:00:06,896 - common - INFO - Loaded 32 rows into raw.zelda_games
+2026-05-13 09:00:06,897 - common - INFO - [games] pulled 32, upserted into raw.zelda_games
+2026-05-13 09:00:06,897 - common - INFO - === Running extractor for 'staff' ===
+2026-05-13 09:00:06,897 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/staff
+2026-05-13 09:00:07,677 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-13 09:00:08,476 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-13 09:00:09,328 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-13 09:00:10,478 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-13 09:00:11,389 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-13 09:00:12,267 - common - INFO - page 5: fetched 4 records (running total: 254)
+2026-05-13 09:00:12,267 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/staff — 254 records total
+2026-05-13 09:00:12,268 - common - INFO - Loading 254 rows into raw.zelda_staff
+2026-05-13 09:00:12,371 - common - INFO - Loaded 254 rows into raw.zelda_staff
+2026-05-13 09:00:12,371 - common - INFO - [staff] pulled 254, upserted into raw.zelda_staff
+2026-05-13 09:00:12,371 - common - INFO - === Running extractor for 'characters' ===
+2026-05-13 09:00:12,371 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/characters
+2026-05-13 09:00:13,390 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-13 09:00:14,471 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-13 09:00:15,851 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-13 09:00:16,726 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-13 09:00:17,608 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-13 09:00:19,222 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-13 09:00:20,714 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-13 09:00:21,836 - common - INFO - page 7: fetched 50 records (running total: 400)
+2026-05-13 09:00:23,081 - common - INFO - page 8: fetched 50 records (running total: 450)
+2026-05-13 09:00:24,261 - common - INFO - page 9: fetched 50 records (running total: 500)
+2026-05-13 09:00:25,677 - common - INFO - page 10: fetched 50 records (running total: 550)
+2026-05-13 09:00:27,314 - common - INFO - page 11: fetched 50 records (running total: 600)
+2026-05-13 09:00:28,136 - common - INFO - page 12: fetched 50 records (running total: 650)
+2026-05-13 09:00:29,369 - common - INFO - page 13: fetched 50 records (running total: 700)
+2026-05-13 09:00:30,306 - common - INFO - page 14: fetched 50 records (running total: 750)
+2026-05-13 09:00:31,680 - common - INFO - page 15: fetched 50 records (running total: 800)
+2026-05-13 09:00:32,674 - common - INFO - page 16: fetched 50 records (running total: 850)
+2026-05-13 09:00:34,586 - common - INFO - page 17: fetched 50 records (running total: 900)
+2026-05-13 09:00:36,203 - common - INFO - page 18: fetched 50 records (running total: 950)
+2026-05-13 09:00:37,025 - common - INFO - page 19: fetched 50 records (running total: 1000)
+2026-05-13 09:00:38,070 - common - INFO - page 20: fetched 50 records (running total: 1050)
+2026-05-13 09:00:39,184 - common - INFO - page 21: fetched 50 records (running total: 1100)
+2026-05-13 09:00:42,068 - common - INFO - page 22: fetched 50 records (running total: 1150)
+2026-05-13 09:00:42,987 - common - INFO - page 23: fetched 50 records (running total: 1200)
+2026-05-13 09:00:43,845 - common - INFO - page 24: fetched 50 records (running total: 1250)
+2026-05-13 09:00:44,679 - common - INFO - page 25: fetched 50 records (running total: 1300)
+2026-05-13 09:00:45,747 - common - INFO - page 26: fetched 50 records (running total: 1350)
+2026-05-13 09:00:47,058 - common - INFO - page 27: fetched 50 records (running total: 1400)
+2026-05-13 09:00:48,128 - common - INFO - page 28: fetched 50 records (running total: 1450)
+2026-05-13 09:00:49,216 - common - INFO - page 29: fetched 50 records (running total: 1500)
+2026-05-13 09:00:50,558 - common - INFO - page 30: fetched 50 records (running total: 1550)
+2026-05-13 09:00:51,686 - common - INFO - page 31: fetched 50 records (running total: 1600)
+2026-05-13 09:00:52,669 - common - INFO - page 32: fetched 50 records (running total: 1650)
+2026-05-13 09:00:53,509 - common - INFO - page 33: fetched 27 records (running total: 1677)
+2026-05-13 09:00:53,511 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/characters — 1677 records total
+2026-05-13 09:00:53,516 - common - INFO - Loading 1677 rows into raw.zelda_characters
+2026-05-13 09:00:53,761 - common - INFO - Loaded 1677 rows into raw.zelda_characters
+2026-05-13 09:00:53,761 - common - INFO - [characters] pulled 1677, upserted into raw.zelda_characters
+2026-05-13 09:00:53,761 - common - INFO - === Running extractor for 'monsters' ===
+2026-05-13 09:00:53,761 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/monsters
+2026-05-13 09:00:54,594 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-13 09:00:56,195 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-13 09:00:58,039 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-13 09:01:00,152 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-13 09:01:01,368 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-13 09:01:03,512 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-13 09:01:04,703 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-13 09:01:06,480 - common - INFO - page 7: fetched 50 records (running total: 400)
+2026-05-13 09:01:07,318 - common - INFO - page 8: fetched 50 records (running total: 450)
+2026-05-13 09:01:09,010 - common - INFO - page 9: fetched 50 records (running total: 500)
+2026-05-13 09:01:10,578 - common - INFO - page 10: fetched 50 records (running total: 550)
+2026-05-13 09:01:12,478 - common - INFO - page 11: fetched 50 records (running total: 600)
+2026-05-13 09:01:18,112 - common - INFO - page 12: fetched 50 records (running total: 650)
+2026-05-13 09:01:19,296 - common - INFO - page 13: fetched 50 records (running total: 700)
+2026-05-13 09:01:20,400 - common - INFO - page 14: fetched 50 records (running total: 750)
+2026-05-13 09:01:22,202 - common - INFO - page 15: fetched 50 records (running total: 800)
+2026-05-13 09:01:23,507 - common - INFO - page 16: fetched 35 records (running total: 835)
+2026-05-13 09:01:23,507 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/monsters — 835 records total
+2026-05-13 09:01:23,510 - common - INFO - Loading 835 rows into raw.zelda_monsters
+2026-05-13 09:01:23,613 - common - INFO - Loaded 835 rows into raw.zelda_monsters
+2026-05-13 09:01:23,613 - common - INFO - [monsters] pulled 835, upserted into raw.zelda_monsters
+2026-05-13 09:01:23,614 - common - INFO - === Running extractor for 'bosses' ===
+2026-05-13 09:01:23,614 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/bosses
+2026-05-13 09:01:25,058 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-13 09:01:27,198 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-13 09:01:28,142 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-13 09:01:29,914 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-13 09:01:32,197 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-13 09:01:33,467 - common - INFO - page 5: fetched 25 records (running total: 275)
+2026-05-13 09:01:33,467 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/bosses — 275 records total
+2026-05-13 09:01:33,469 - common - INFO - Loading 275 rows into raw.zelda_bosses
+2026-05-13 09:01:33,573 - common - INFO - Loaded 275 rows into raw.zelda_bosses
+2026-05-13 09:01:33,573 - common - INFO - [bosses] pulled 275, upserted into raw.zelda_bosses
+2026-05-13 09:01:33,573 - common - INFO - === Running extractor for 'dungeons' ===
+2026-05-13 09:01:33,573 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/dungeons
+2026-05-13 09:01:35,260 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-13 09:01:37,260 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-13 09:01:38,793 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-13 09:01:40,842 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-13 09:01:42,729 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-13 09:01:43,538 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-13 09:01:46,066 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-13 09:01:46,908 - common - INFO - page 7: fetched 5 records (running total: 355)
+2026-05-13 09:01:46,908 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/dungeons — 355 records total
+2026-05-13 09:01:46,909 - common - INFO - Loading 355 rows into raw.zelda_dungeons
+2026-05-13 09:01:47,016 - common - INFO - Loaded 355 rows into raw.zelda_dungeons
+2026-05-13 09:01:47,016 - common - INFO - [dungeons] pulled 355, upserted into raw.zelda_dungeons
+2026-05-13 09:01:47,016 - common - INFO - === Running extractor for 'places' ===
+2026-05-13 09:01:47,016 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/places
+2026-05-13 09:01:47,848 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-13 09:01:48,725 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-13 09:01:49,652 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-13 09:01:50,577 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-13 09:01:51,799 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-13 09:01:52,693 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-13 09:01:53,979 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-13 09:01:54,894 - common - INFO - page 7: fetched 50 records (running total: 400)
+2026-05-13 09:01:56,932 - common - INFO - page 8: fetched 50 records (running total: 450)
+2026-05-13 09:01:57,832 - common - INFO - page 9: fetched 50 records (running total: 500)
+2026-05-13 09:01:58,863 - common - INFO - page 10: fetched 50 records (running total: 550)
+2026-05-13 09:01:59,739 - common - INFO - page 11: fetched 50 records (running total: 600)
+2026-05-13 09:02:00,823 - common - INFO - page 12: fetched 50 records (running total: 650)
+2026-05-13 09:02:01,624 - common - INFO - page 13: fetched 50 records (running total: 700)
+2026-05-13 09:02:03,571 - common - INFO - page 14: fetched 50 records (running total: 750)
+2026-05-13 09:02:07,108 - common - INFO - page 15: fetched 50 records (running total: 800)
+2026-05-13 09:02:08,634 - common - INFO - page 16: fetched 50 records (running total: 850)
+2026-05-13 09:02:09,678 - common - INFO - page 17: fetched 50 records (running total: 900)
+2026-05-13 09:02:10,488 - common - INFO - page 18: fetched 50 records (running total: 950)
+2026-05-13 09:02:11,637 - common - INFO - page 19: fetched 50 records (running total: 1000)
+2026-05-13 09:02:12,839 - common - INFO - page 20: fetched 50 records (running total: 1050)
+2026-05-13 09:02:14,341 - common - INFO - page 21: fetched 50 records (running total: 1100)
+2026-05-13 09:02:15,504 - common - INFO - page 22: fetched 50 records (running total: 1150)
+2026-05-13 09:02:16,867 - common - INFO - page 23: fetched 50 records (running total: 1200)
+2026-05-13 09:02:17,825 - common - INFO - page 24: fetched 50 records (running total: 1250)
+2026-05-13 09:02:18,729 - common - INFO - page 25: fetched 50 records (running total: 1300)
+2026-05-13 09:02:20,078 - common - INFO - page 26: fetched 50 records (running total: 1350)
+2026-05-13 09:02:21,909 - common - INFO - page 27: fetched 50 records (running total: 1400)
+2026-05-13 09:02:25,356 - common - INFO - page 28: fetched 50 records (running total: 1450)
+2026-05-13 09:02:28,302 - common - INFO - page 29: fetched 40 records (running total: 1490)
+2026-05-13 09:02:28,302 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/places — 1490 records total
+2026-05-13 09:02:28,306 - common - INFO - Loading 1490 rows into raw.zelda_places
+2026-05-13 09:02:28,437 - common - INFO - Loaded 1490 rows into raw.zelda_places
+2026-05-13 09:02:28,437 - common - INFO - [places] pulled 1490, upserted into raw.zelda_places
+2026-05-13 09:02:28,438 - common - INFO - === Running extractor for 'items' ===
+2026-05-13 09:02:28,438 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/items
+2026-05-13 09:02:29,189 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-13 09:02:30,999 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-13 09:02:31,951 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-13 09:02:33,928 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-13 09:02:35,025 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-13 09:02:36,282 - common - INFO - page 5: fetched 50 records (running total: 300)
+2026-05-13 09:02:37,114 - common - INFO - page 6: fetched 50 records (running total: 350)
+2026-05-13 09:02:38,969 - common - INFO - page 7: fetched 50 records (running total: 400)
+2026-05-13 09:02:40,205 - common - INFO - page 8: fetched 50 records (running total: 450)
+2026-05-13 09:02:41,220 - common - INFO - page 9: fetched 50 records (running total: 500)
+2026-05-13 09:02:42,331 - common - INFO - page 10: fetched 50 records (running total: 550)
+2026-05-13 09:02:44,005 - common - INFO - page 11: fetched 50 records (running total: 600)
+2026-05-13 09:02:44,843 - common - INFO - page 12: fetched 50 records (running total: 650)
+2026-05-13 09:02:45,712 - common - INFO - page 13: fetched 50 records (running total: 700)
+2026-05-13 09:02:46,788 - common - INFO - page 14: fetched 50 records (running total: 750)
+2026-05-13 09:02:47,971 - common - INFO - page 15: fetched 50 records (running total: 800)
+2026-05-13 09:02:49,807 - common - INFO - page 16: fetched 50 records (running total: 850)
+2026-05-13 09:02:52,022 - common - INFO - page 17: fetched 50 records (running total: 900)
+2026-05-13 09:02:54,160 - common - INFO - page 18: fetched 50 records (running total: 950)
+2026-05-13 09:02:54,983 - common - INFO - page 19: fetched 50 records (running total: 1000)
+2026-05-13 09:02:56,229 - common - INFO - page 20: fetched 50 records (running total: 1050)
+2026-05-13 09:02:57,296 - common - INFO - page 21: fetched 50 records (running total: 1100)
+2026-05-13 09:02:58,328 - common - INFO - page 22: fetched 50 records (running total: 1150)
+2026-05-13 09:02:59,280 - common - INFO - page 23: fetched 50 records (running total: 1200)
+2026-05-13 09:03:01,431 - common - INFO - page 24: fetched 50 records (running total: 1250)
+2026-05-13 09:03:02,857 - common - INFO - page 25: fetched 50 records (running total: 1300)
+2026-05-13 09:03:03,841 - common - INFO - page 26: fetched 50 records (running total: 1350)
+2026-05-13 09:03:04,670 - common - INFO - page 27: fetched 50 records (running total: 1400)
+2026-05-13 09:03:05,577 - common - INFO - page 28: fetched 50 records (running total: 1450)
+2026-05-13 09:03:06,709 - common - INFO - page 29: fetched 50 records (running total: 1500)
+2026-05-13 09:03:08,001 - common - INFO - page 30: fetched 50 records (running total: 1550)
+2026-05-13 09:03:08,809 - common - INFO - page 31: fetched 50 records (running total: 1600)
+2026-05-13 09:03:10,688 - common - INFO - page 32: fetched 50 records (running total: 1650)
+2026-05-13 09:03:11,824 - common - INFO - page 33: fetched 50 records (running total: 1700)
+2026-05-13 09:03:12,798 - common - INFO - page 34: fetched 50 records (running total: 1750)
+2026-05-13 09:03:13,631 - common - INFO - page 35: fetched 50 records (running total: 1800)
+2026-05-13 09:03:14,560 - common - INFO - page 36: fetched 50 records (running total: 1850)
+2026-05-13 09:03:15,872 - common - INFO - page 37: fetched 19 records (running total: 1869)
+2026-05-13 09:03:15,872 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/items — 1869 records total
+2026-05-13 09:03:15,878 - common - INFO - Loading 1869 rows into raw.zelda_items
+2026-05-13 09:03:16,000 - common - INFO - Loaded 1869 rows into raw.zelda_items
+2026-05-13 09:03:16,002 - common - INFO - [items] pulled 1869, upserted into raw.zelda_items
+2026-05-13 15:42:07,061 - common - INFO - === Running extractor for 'staff' ===
+2026-05-13 15:42:07,061 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/staff
+2026-05-13 15:42:09,125 - common - INFO - page 0: fetched 50 records (running total: 50)
+2026-05-13 15:42:10,789 - common - INFO - page 1: fetched 50 records (running total: 100)
+2026-05-13 15:42:12,193 - common - INFO - page 2: fetched 50 records (running total: 150)
+2026-05-13 15:42:13,324 - common - INFO - page 3: fetched 50 records (running total: 200)
+2026-05-13 15:42:14,705 - common - INFO - page 4: fetched 50 records (running total: 250)
+2026-05-13 15:42:15,978 - common - INFO - page 5: fetched 4 records (running total: 254)
+2026-05-13 15:42:15,978 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/staff — 254 records total
+2026-05-13 15:42:16,225 - common - INFO - [staff] loaded 254 rows, quarantined 0 unidentified rows
+2026-05-13 15:42:16,225 - common - INFO - [staff] sumary: fetched=254, loaded=254, unidentified=0
+2026-05-13 16:00:10,888 - common - INFO - === Running extractor for 'staff' ===
+2026-05-13 16:00:10,890 - common - INFO - Starting fetch from https://zelda.fanapis.com/api/staff
+2026-05-13 16:00:11,928 - common - INFO - page 0: fetched 50 records (running total: 52)
+2026-05-13 16:00:12,734 - common - INFO - page 1: fetched 50 records (running total: 102)
+2026-05-13 16:00:13,540 - common - INFO - page 2: fetched 50 records (running total: 152)
+2026-05-13 16:00:14,385 - common - INFO - page 3: fetched 50 records (running total: 202)
+2026-05-13 16:00:15,302 - common - INFO - page 4: fetched 50 records (running total: 252)
+2026-05-13 16:00:16,123 - common - INFO - page 5: fetched 4 records (running total: 256)
+2026-05-13 16:00:16,123 - common - INFO - Finished fetch from https://zelda.fanapis.com/api/staff — 256 records total
+2026-05-13 16:00:16,369 - common - INFO - [staff] loaded 254 rows, quarantined 2 unidentified rows
+2026-05-13 16:00:16,369 - common - INFO - [staff] sumary: fetched=256, loaded=254, unidentified=2
+2026-05-13 21:04:14,329 - common - INFO - === Running extractor for 'staff' ===
+2026-05-13 21:04:14,594 - common - INFO - [staff] starting fresh run from page 0
+2026-05-13 21:04:16,771 - common - INFO - [staff] loaded 50 rows, quarantined 0 unidentified rows
+2026-05-13 21:04:16,964 - common - ERROR - [staff] extractor failed
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\Test py\common.py", line 312, in run
+    write_state(
+  File "C:\Users\User\Desktop\Test py\common.py", line 248, in write_state
+    cursor.execute(sql, [source_name] + list(fields.values()))
+psycopg2.errors.NotNullViolation: null value in column "status" of relation "extraction_state" violates not-null constraint
+DETAIL:  Failing row contains (staff, null, 0, null, null, null, 50).
+
+2026-05-13 21:06:09,929 - common - INFO - === Running extractor for 'staff' ===
+2026-05-13 21:06:10,119 - common - INFO - [staff] starting fresh run from page 0
+2026-05-13 21:06:10,832 - common - INFO - [staff] loaded 50 rows, quarantined 0 unidentified rows
+2026-05-13 21:06:11,018 - common - ERROR - [staff] extractor failed
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\Test py\common.py", line 306, in run
+    write_state(
+  File "C:\Users\User\Desktop\Test py\common.py", line 242, in write_state
+    cur.execute(sql, [source_name] + list(fields.values()))
+psycopg2.errors.NotNullViolation: null value in column "status" of relation "extraction_state" violates not-null constraint
+DETAIL:  Failing row contains (staff, null, 0, null, null, null, 50).
+
+2026-05-13 21:17:24,435 - common - INFO - === Running extractor for 'staff' ===
+2026-05-13 21:17:24,620 - common - INFO - [staff] starting fresh run from page 0
+2026-05-13 21:17:25,778 - common - INFO - [staff] loaded 50 rows, quarantined 0 unidentified rows
+2026-05-13 21:17:25,866 - common - INFO - [staff] page 0: loaded 50 (running total 50)
+2026-05-13 21:17:27,703 - common - INFO - [staff] loaded 50 rows, quarantined 0 unidentified rows
+2026-05-13 21:17:27,790 - common - INFO - [staff] page 1: loaded 50 (running total 100)
+2026-05-13 21:17:29,035 - common - INFO - [staff] loaded 50 rows, quarantined 0 unidentified rows
+2026-05-13 21:17:29,126 - common - INFO - [staff] page 2: loaded 50 (running total 150)
+2026-05-13 21:17:30,268 - common - INFO - [staff] loaded 50 rows, quarantined 0 unidentified rows
+2026-05-13 21:17:30,356 - common - INFO - [staff] page 3: loaded 50 (running total 200)
+2026-05-13 21:17:31,395 - common - INFO - [staff] loaded 50 rows, quarantined 0 unidentified rows
+2026-05-13 21:17:31,484 - common - INFO - [staff] page 4: loaded 50 (running total 250)
+2026-05-13 21:17:32,517 - common - INFO - [staff] loaded 4 rows, quarantined 0 unidentified rows
+2026-05-13 21:17:32,605 - common - INFO - [staff] page 5: loaded 4 (running total 254)
+2026-05-13 21:17:32,694 - common - INFO - [staff] completed: loaded=254, unidentified=0
+2026-05-13 21:18:58,594 - common - INFO - === Running extractor for 'staff' ===
+2026-05-13 21:18:58,776 - common - INFO - [staff] starting fresh run from page 0
+2026-05-13 21:18:59,464 - common - INFO - [staff] loaded 50 rows, quarantined 0 unidentified rows
+2026-05-13 21:18:59,551 - common - INFO - [staff] page 0: loaded 50 (running total 50)
+2026-05-13 21:19:00,485 - common - INFO - [staff] loaded 50 rows, quarantined 0 unidentified rows
+2026-05-13 21:19:00,677 - common - INFO - [staff] page 1: loaded 50 (running total 100)
+2026-05-13 21:19:01,510 - common - INFO - [staff] loaded 50 rows, quarantined 0 unidentified rows
+2026-05-13 21:19:01,598 - common - INFO - [staff] page 2: loaded 50 (running total 150)
+2026-05-13 21:19:01,888 - common - ERROR - [staff] extractor failed
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\Test py\common.py", line 294, in run
+    raise RuntimeError(f"Simulated crash at page {SIMULATE_CRASH_AT_PAGE}")
+RuntimeError: Simulated crash at page 3
+2026-05-13 21:21:43,900 - common - INFO - === Running extractor for 'staff' ===
+2026-05-13 21:21:44,099 - common - INFO - [staff] resuming from page 3 (previous run status: failed)
+2026-05-13 21:21:44,742 - common - INFO - [staff] loaded 50 rows, quarantined 0 unidentified rows
+2026-05-13 21:21:44,840 - common - INFO - [staff] page 3: loaded 50 (running total 200)
+2026-05-13 21:21:45,750 - common - INFO - [staff] loaded 50 rows, quarantined 0 unidentified rows
+2026-05-13 21:21:45,840 - common - INFO - [staff] page 4: loaded 50 (running total 250)
+2026-05-13 21:21:46,868 - common - INFO - [staff] loaded 4 rows, quarantined 0 unidentified rows
+2026-05-13 21:21:46,959 - common - INFO - [staff] page 5: loaded 4 (running total 254)
+2026-05-13 21:21:47,049 - common - INFO - [staff] completed: loaded=254, unidentified=0

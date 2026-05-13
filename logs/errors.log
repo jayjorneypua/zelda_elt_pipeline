@@ -1,0 +1,23 @@
+2026-05-13 21:04:16,964 - common - ERROR - [staff] extractor failed
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\Test py\common.py", line 312, in run
+    write_state(
+  File "C:\Users\User\Desktop\Test py\common.py", line 248, in write_state
+    cursor.execute(sql, [source_name] + list(fields.values()))
+psycopg2.errors.NotNullViolation: null value in column "status" of relation "extraction_state" violates not-null constraint
+DETAIL:  Failing row contains (staff, null, 0, null, null, null, 50).
+
+2026-05-13 21:06:11,018 - common - ERROR - [staff] extractor failed
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\Test py\common.py", line 306, in run
+    write_state(
+  File "C:\Users\User\Desktop\Test py\common.py", line 242, in write_state
+    cur.execute(sql, [source_name] + list(fields.values()))
+psycopg2.errors.NotNullViolation: null value in column "status" of relation "extraction_state" violates not-null constraint
+DETAIL:  Failing row contains (staff, null, 0, null, null, null, 50).
+
+2026-05-13 21:19:01,888 - common - ERROR - [staff] extractor failed
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\Test py\common.py", line 294, in run
+    raise RuntimeError(f"Simulated crash at page {SIMULATE_CRASH_AT_PAGE}")
+RuntimeError: Simulated crash at page 3

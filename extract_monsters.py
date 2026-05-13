@@ -1,7 +1,7 @@
-from common import run_pipeline
+from common import run
 
 NAME = "monsters"
 URL = "https://zelda.fanapis.com/api/monsters"
 
 if __name__ == "__main__":
-    run_pipeline(NAME, URL);
+    run(NAME, URL);

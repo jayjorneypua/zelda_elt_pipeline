@@ -19,6 +19,10 @@ from tenacity import (
     before_sleep_log,
 )
 
+from datetime import datetime, timezone
+
+SIMULATE_CRASH_AT_PAGE = None
+
 # ──────────────────────────────────────────────────────────────────────────────
 # Logging
 # ──────────────────────────────────────────────────────────────────────────────
@@ -81,9 +85,9 @@ DDL = """
     CREATE SCHEMA IF NOT EXISTS raw;
     
     CREATE TABLE IF NOT EXISTS raw.zelda_{name} (
-        id           TEXT PRIMARY KEY,
-        payload      JSONB NOT NULL,
-        extracted_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        id           TEXT PRIMARY KEY
+      , payload      JSONB NOT NULL
+      , extracted_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
     );
 
 """
@@ -92,29 +96,48 @@ UPSERT = """
 
     INSERT INTO raw.zelda_{name} (id, payload)
     VALUES %s
-    ON CONFLICT (id) DO UPDATE SET
+    ON CONFLICT (id) 
+    DO UPDATE 
+    SET
         payload      = EXCLUDED.payload,
         extracted_at = NOW()
-    WHERE raw.zelda_{name}.payload IS DISTINCT FROM EXCLUDED.payload;
+    WHERE 
+        raw.zelda_{name}.payload IS DISTINCT FROM EXCLUDED.payload;
 
 """
 
 UNIDENTIFIED_DDL = """
     CREATE SCHEMA IF NOT EXISTS raw;
+
     CREATE TABLE IF NOT EXISTS raw.unidentified (
-        raw_id BIGSERIAL PRIMARY KEY,
-        source_name TEXT NOT NULL,
-        raw_payload JSONB NOT NULL,
-        reason TEXT,
-        extracted_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        raw_id          BIGSERIAL PRIMARY KEY
+      , source_name     TEXT NOT NULL
+      , raw_payload     JSONB NOT NULL
+      , reason          TEXT
+      , extracted_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
     );
 """
 
 UNIDENTIFIED_INSERT = """
-    INSERT INTO raw.unidentified (source_name, raw_payload, reason)
+    INSERT INTO raw.unidentified (
+        source_name, raw_payload, reason
+    )
     VALUES %s;
 """
 
+STATE_DDL = """
+    CREATE SCHEMA IF NOT EXISTS meta;
+
+    CREATE TABLE IF NOT EXISTS meta.extraction_state(
+        source_name             TEXT PRIMARY KEY
+      , status                  TEXT NOT NULL
+      , last_completed_page     INTEGER
+      , run_started_at          TIMESTAMPTZ
+      , run_ended_at            TIMESTAMPTZ
+      , error_message           TEXT
+      , records_loaded          INTEGER NOT NULL DEFAULT 0
+    )
+"""
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Fetch (with retries)
@@ -144,38 +167,6 @@ def fetch_page(url, page, page_size):
 
     response.raise_for_status()
     return response.json()
-
-
-def fetch_all(url):
-    """Paginate the API until we've pulled every record."""
-    page = 0
-    output = []
-    logger.info("Starting fetch from %s", url)
-
-    while True:
-
-        body = fetch_page(url, page, PAGE_SIZE)
-        data = body.get("data", [])
-
-        if not data:
-            break
-
-        output.extend(data)
-
-        logger.info(                               
-            "page %d: fetched %d records (running total: %d)",
-            page, len(data), len(output),
-        )
-
-        if len(data) < PAGE_SIZE:
-            break
-
-        page += 1
-        time.sleep(SLEEP)
-
-    logger.info("Finished fetch from %s — %d records total", url, len(output))
-    return output
-
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Load
@@ -211,23 +202,144 @@ def load_to_raw(name, records):
     return len(good_records), len(unidentified)
 
 
+def initial_state_table():
+    """Make sure meta.extraction_state exists."""
+    with psycopg2.connect(DSN) as conn, conn.cursor() as cur:
+        cur.execute(STATE_DDL)
+
+
+def read_state(source_name):
+    """Read the current state row for a source. Returns None if no row exists."""
+    with psycopg2.connect(DSN) as conn, conn.cursor() as cur:
+        cur.execute(
+            "SELECT status, last_completed_page, records_loaded "
+            "FROM meta.extraction_state WHERE source_name = %s",
+            (source_name,),
+        )
+        row = cur.fetchone()
+    if row is None:
+        return None
+    return {
+        "status": row[0],
+        "last_completed_page": row[1],
+        "records_loaded": row[2],
+    }
+
+
+def write_state(source_name, **fields):
+    """Upsert state. Pass column-value pairs as kwargs."""
+    if not fields:
+        return
+    cols = list(fields.keys())
+    placeholders = ", ".join(["%s"] * len(cols))
+    updates      = ", ".join([f"{c} = EXCLUDED.{c}" for c in cols])
+    sql = f"""
+        INSERT INTO meta.extraction_state (source_name, {', '.join(cols)})
+        VALUES (%s, {placeholders})
+        ON CONFLICT (source_name) DO UPDATE SET {updates}
+    """
+    with psycopg2.connect(DSN) as conn, conn.cursor() as cur:
+        cur.execute(sql, [source_name] + list(fields.values()))
+
 # ──────────────────────────────────────────────────────────────────────────────
 # Top-level runner
 # ──────────────────────────────────────────────────────────────────────────────
-def run_pipeline(name, url):                                 
-    """Pull from URL and load into raw.zelda_<name>. Returns row count."""
-
+def run(name, url):
+    """
+    Pull from URL and load into raw.zelda_<name>, page by page,
+    with resumable checkpoint state in meta.extraction_state.
+    Returns (loaded_count, unidentified_count).
+    """
     logger.info("=== Running extractor for '%s' ===", name)
 
-    try:
-        records = fetch_all(url)
-        loaded, unidentified = load_to_raw(name, records)
+    # initialize the meta.extraction_state table.
+    initial_state_table()
+
+    # Decide where to start based on previous run's state
+    state = read_state(name)
+
+    # if the previous run was interrupted(in_progress) or failed, continue where it left off and keep the previous loaded-record count. Otherwise start fresh. 
+    if state and state["status"] in ("in_progress", "failed"):
+        start_page = (state["last_completed_page"] or -1) + 1
+        records_loaded = state["records_loaded"]
+
         logger.info(
-            "[%s] sumary: fetched=%d, loaded=%d, unidentified=%d",
-            name, len(records), loaded, unidentified
+            "[%s] resuming from page %d (previous run status: %s)",
+            name, start_page, state["status"],
         )
-        return loaded, unidentified
-        
-    except Exception:
+    else:
+        start_page = 0
+        records_loaded = 0
+        logger.info("[%s] starting fresh run from page 0", name)
+
+    # Mark this run as in_progress
+    now = datetime.now(timezone.utc)
+    write_state(
+        name,
+        status = "in_progress",
+        run_started_at = now,
+        run_ended_at = None,
+        error_message = None,
+        records_loaded = records_loaded,
+        last_completed_page = (start_page - 1) if start_page > 0 else None,
+    )
+
+    try:
+        total_unidentified = 0
+        page = start_page
+
+        while True:
+            # Optional crash injection for testing — set SIMULATE_CRASH_AT_PAGE at top of file
+            if SIMULATE_CRASH_AT_PAGE is not None and page == SIMULATE_CRASH_AT_PAGE:
+                raise RuntimeError(f"Simulated crash at page {SIMULATE_CRASH_AT_PAGE}")
+
+            body = fetch_page(url, page, PAGE_SIZE)
+            data = body.get("data", [])
+            if not data:
+                break
+
+            loaded, unidentified = load_to_raw(name, data)
+            records_loaded += loaded
+            total_unidentified += unidentified
+
+            # Checkpoint after this page is safely in raw
+            write_state(
+                name,
+                status="in_progress",
+                last_completed_page=page,
+                records_loaded=records_loaded,
+            )
+
+            logger.info(
+                "[%s] page %d: loaded %d (running total %d)",
+                name, page, loaded, records_loaded,
+            )
+
+            if len(data) < PAGE_SIZE:
+                break
+            page += 1
+            time.sleep(SLEEP)
+
+        # Whole run finished cleanly
+        write_state(
+            name,
+            status="completed",
+            run_ended_at=datetime.now(timezone.utc),
+            error_message=None,
+        )
+        logger.info(
+            "[%s] completed: loaded=%d, unidentified=%d",
+            name, records_loaded, total_unidentified,
+        )
+        return records_loaded, total_unidentified
+
+    except Exception as e:
+        # Mark failed; the next run will read last_completed_page and resume
+        write_state(
+            name,
+            status="failed",
+            run_ended_at=datetime.now(timezone.utc),
+            error_message=str(e),
+        )
         logger.exception("[%s] extractor failed", name)
         raise
